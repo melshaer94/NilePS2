@@ -3,8 +3,21 @@
 <h1>
    products
 </h1>
-<p>
-    {{   name}}
+
+    {% for x in pro %}
+       <h1> {{x.name}} </h1>
+         <h1> {{x.price}} </h1>
+            <h1> {{x.description}} </h1>
+            <h1> {{x.category}} </h1>
+            <h1> {{x.image}} </h1>
+            <h1> {{x.created_at}} </h1>
+            <h1> {{x.updated_at}} </h1>
+            <h1> {{x.id}} </h1>
+            <h1> {{x.slug}} </h1>
+            <h1> {{x.is_active}} </h1>
+        
+
+    {% endfor %}
 
 
 {%endblock contents%}

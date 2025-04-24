@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class product (models.Model) :
+class mproduct (models.Model) :
     name = models.CharField (max_length = 100)
     image = models.ImageField(upload_to = 'photos/%y/%m/%d')
     price = models.IntegerField(default=0)
@@ -11,4 +11,11 @@ class product (models.Model) :
     digital = models.BooleanField(default=False, null=True, blank=True)
     def __str__(self) :
         return self.name
+
+    class Meta :
+        verbose_name = 'product'
+        verbose_name_plural = 'Productssss'
+        ordering = ['-name']
+        
+    
     
